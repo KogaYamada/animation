@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide</title>
+  </head>
+  <style>
+    @keyframes hide {
+      0% {
+        opacity: 1;
+        height: 80px;
+        line-height: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      75% {
+        opacity: 0;
+        height: 80px;
+        line-height: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      100% {
+        opacity: 0;
+        height: 0;
+        line-height: 0;
+        margin-bottom: 0;
+        padding: 0;
+      }
+    }
+
+    div {
+      margin: 10px;
+      background-color: aqua;
+      align-items: center;
+      width: 95%;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+
+      animation-name: hide;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+    }
+    button {
+      margin-right: 10px;
+      height: 30px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const div = document.querySelector('div');
+      const buttons = document.querySelectorAll('.hide');
+
+      buttons.forEach((button) => {
+        button.onclick = (event) => {
+          const element = event.target;
+          if (element.className === 'hide') {
+            element.parentElement.style.animationPlayState = 'running';
+            element.parentElement.addEventListener('animationend', () => {
+              element.parentElement.remove();
+            });
+          }
+        };
+      });
+    });
+  </script>
+  <body>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+    <div>
+      <p>POST</p>
+      <button class="hide">hide</button>
+    </div>
+  </body>
+</html>
